@@ -1,0 +1,4 @@
+displayName = Spirit Cross
+author = Team Spirit
+version = 0.1
+modReferences = SpiritReforged

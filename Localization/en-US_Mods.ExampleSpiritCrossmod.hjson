@@ -1,0 +1,6 @@
+Items: {
+	IrradiationTool: {
+		DisplayName: Irradiation Tool
+		Tooltip: ""
+	}
+}
