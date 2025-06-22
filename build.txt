@@ -1,4 +1,4 @@
-displayName = Spirit Cross
+displayName = Spirit Crossmod
 author = Team Spirit
 version = 0.1
 modReferences = SpiritReforged

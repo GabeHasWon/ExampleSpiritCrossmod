@@ -1,1 +1,8 @@
-Modify this file with a description of your mod.
+---- Spirit Crossmod ----
+by Team Spirit
+
+This mod aims to showcase some of Spirit Reforged's crossmod capabilities.
+At the moment, this mod showcases our conversion API through a custom (and very simple) "Irradiated" biome conversion for the Savanna.
+It also showcases how to effectively use a modReference or, when possible, Mod.Calls without a reference to do so.
+
+All code can be found on the GitHub: https://github.com/GabeHasWon/ExampleSpiritCrossmod
