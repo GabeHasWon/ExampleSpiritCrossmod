@@ -6,14 +6,12 @@ using Terraria.ObjectData;
 namespace ExampleSpiritCrossmod.Content;
 
 /// <summary>
-/// A converted Savanna Foliage tile. Behaves the same as default savanna foliage.<br/>
+/// A converted Elephant Grass tile. Behaves the same as the default tile.<br/>
 /// Note the <see cref="DrawOrderAttribute"/> applied to this class. This is an internal Reforged tool we use to draw it over players.
 /// </summary>
 [DrawOrder(DrawOrderAttribute.Layer.NonSolid, DrawOrderAttribute.Layer.OverPlayers)]
 public class IrradiatedElephantGrass : ElephantGrass
 {
-    protected override Color SubColor => Color.YellowGreen;
-
     public override void SetStaticDefaults()
     {
         base.SetStaticDefaults();
