@@ -3,7 +3,7 @@ using SpiritReforged.Content.Savanna.Tiles;
 using Terraria.ID;
 using Terraria.ObjectData;
 
-namespace ExampleSpiritCrossmod.Content;
+namespace ExampleSpiritCrossmod.Content.IrradiatedSavanna;
 
 /// <summary> A converted Savanna Foliage tile. Behaves the same as default savanna foliage. </summary>
 public class IrradiatedSavannaFoliage : SavannaFoliage

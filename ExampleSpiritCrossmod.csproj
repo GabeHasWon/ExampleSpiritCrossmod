@@ -8,9 +8,6 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
-	  <Compile Include="README.md" />
-	</ItemGroup>
-	<ItemGroup>
 	  <Reference Include="SpiritReforged">
 	    <HintPath>Libraries\SpiritReforged.dll</HintPath>
 	  </Reference>

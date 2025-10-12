@@ -2,7 +2,7 @@
 using SpiritReforged.Common;
 using SpiritReforged.Content.Savanna.Tiles;
 
-namespace ExampleSpiritCrossmod.Content;
+namespace ExampleSpiritCrossmod.Content.IrradiatedSavanna;
 
 internal class IrradiatedSavannaGrass : SavannaGrass
 {
