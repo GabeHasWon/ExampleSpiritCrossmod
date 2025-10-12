@@ -9,6 +9,9 @@ using Terraria.WorldBuilding;
 
 namespace ExampleSpiritCrossmod.Content.FakeSavanna;
 
+/// <summary>
+/// Defines a custom ecotone's logic.
+/// </summary>
 internal class FakeSavannaEcotone : EcotoneBase
 {
     public override void AddTasks(List<GenPass> tasks, List<EcotoneSurfaceMapping.EcotoneEntry> entries)
@@ -18,14 +21,18 @@ internal class FakeSavannaEcotone : EcotoneBase
         if (pyramidIndex == -1)
             return;
 
+        // This is always placed in the generation order, but may not generate, per CanGenerate below.
+        // Note that this is pretty late in generation, and if you want something more like Reforged's 
         tasks.Insert(pyramidIndex + 2, new PassLegacy("False Savanna", BaseGeneration));
     }
 
     private static bool CanGenerate(out (int, int) bounds)
     {
-        const int offX = EcotoneSurfaceMapping.TransitionLength + 1; //Removes forest patches on the left side
+        // Removes forest patches on the left side
+        const int offX = EcotoneSurfaceMapping.TransitionLength + 1;
         bounds = (0, 0);
 
+        // If there's a valid place to put this ecotone - here, between the Ocean and the custom "CandyCanePlains" - return the bounds
         if (EcotoneSurfaceMapping.FindWhere(x => x.SurroundedBy("Ocean", "CandyCanePlains") && EcotoneSurfaceMapping.OnSurface(x)) is EcotoneSurfaceMapping.EcotoneEntry entry)
         {
             bounds = (entry.Start.X - offX, entry.End.X);
@@ -40,7 +47,10 @@ internal class FakeSavannaEcotone : EcotoneBase
         if (!CanGenerate(out var bounds))
             return;
 
-        progress.Message = "Wow this is real";
+        // This code means nothing and looks terrible.
+        // Do whatever here that looks better.
+        // You should use EcotoneSurfaceMapping.TotalSurfaceY to guage the default height of the world in the area;
+        // this is what the Savanna uses to ramp up/down.
 
         int startX = bounds.Item1;
         int endX = bounds.Item2;
@@ -50,7 +60,7 @@ internal class FakeSavannaEcotone : EcotoneBase
 
         for (int x = startX; x < endX; ++x)
         {
-            for (int y = lowY + 400; y > Main.worldSurface * 0.45f; --y)
+            for (int y = lowY + 100; y > Main.worldSurface * 0.45f; --y)
             {
                 Tile tile = Main.tile[x, y];
 
