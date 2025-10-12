@@ -1,16 +1,21 @@
 ﻿using SpiritReforged.Content.Savanna.Tiles;
 using Terraria.ID;
+using Terraria.ObjectData;
 
-namespace ExampleSpiritCrossmod.Content;
+namespace ExampleSpiritCrossmod.Content.IrradiatedSavanna;
 
 /// <summary>
 /// A converted Savanna Foliage tile. Behaves the same as default savanna foliage.
 /// </summary>
 public class IrradiatedSavannaFoliage : SavannaFoliage
 {
-    protected override int AnchorTile => ModContent.TileType<IrradiatedSavannaGrass>();
-    protected override Color MapColor => Color.Yellow;
-    protected override int Dust => DustID.AncientLight;
+    public override void PreAddObjectData()
+    {
+        TileObjectData.newTile.AnchorValidTiles = [ModContent.TileType<IrradiatedSavannaGrass>()];
+
+        DustType = DustID.HallowedPlants;
+        AddMapEntry(new(78, 193, 227));
+    }
 
     public override void SetStaticDefaults()
     {

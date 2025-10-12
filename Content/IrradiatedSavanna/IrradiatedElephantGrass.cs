@@ -3,7 +3,7 @@ using SpiritReforged.Content.Savanna.Tiles;
 using Terraria.ID;
 using Terraria.ObjectData;
 
-namespace ExampleSpiritCrossmod.Content;
+namespace ExampleSpiritCrossmod.Content.IrradiatedSavanna;
 
 /// <summary>
 /// A converted Savanna Foliage tile. Behaves the same as default savanna foliage.<br/>
@@ -12,8 +12,6 @@ namespace ExampleSpiritCrossmod.Content;
 [DrawOrder(DrawOrderAttribute.Layer.NonSolid, DrawOrderAttribute.Layer.OverPlayers)]
 public class IrradiatedElephantGrass : ElephantGrass
 {
-    protected override Color SubColor => Color.YellowGreen;
-
     public override void SetStaticDefaults()
     {
         base.SetStaticDefaults();

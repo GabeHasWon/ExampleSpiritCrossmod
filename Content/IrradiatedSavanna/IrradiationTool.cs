@@ -1,7 +1,7 @@
 ﻿using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace ExampleSpiritCrossmod.Content;
+namespace ExampleSpiritCrossmod.Content.IrradiatedSavanna;
 
 /// <summary>
 /// An absurdly simple tool to test conversion. Replace this with whatever form of conversion you have - natural, powder, clentaminator.<br/>

@@ -2,7 +2,7 @@
 using SpiritReforged.Common;
 using SpiritReforged.Content.Savanna.Tiles;
 
-namespace ExampleSpiritCrossmod.Content;
+namespace ExampleSpiritCrossmod.Content.IrradiatedSavanna;
 
 internal class IrradiatedSavannaGrass : SavannaGrass
 {
@@ -22,7 +22,7 @@ internal class IrradiatedSavannaGrass : SavannaGrass
         GrowTiles(i, j);
 
         // This automatically converts tiles in any cardinal direction randomly, much like a normal Corrupt or Crimson tile would.
-        SpreadHelper.ConversionSpread(i, j, IrradiatedConversion.ConversionType);
+        SpreadHelper.Spread(i, j, IrradiatedConversion.ConversionType, 4);
     }
 
     protected override void GrowTiles(int i, int j)
